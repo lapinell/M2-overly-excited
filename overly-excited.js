@@ -1,6 +1,8 @@
 ////User inputs a sentence
 let sentence = prompt("Provide a sentence."); 
 
+//The red fox likes to jump in the snow after the rabbit.
+
 document.getElementById("origSent").innerHTML = `<p><strong>The sentence you provided was:</strong> ${sentence} </p>`;
 
 ////The program breaks it into individual words.
@@ -28,8 +30,27 @@ for( let i = 0; i < sentArray.length; i++) {
     let storedWord = sentArray[i] + " ";
 
     //add the next word to the stored word(s)
+    //// newPar += storedWord; //original
 
-    newPar += storedWord;
+    // If the current value of the counter variable can be evenly divided by 3 - using the JavaScript remainder operator - then add a single exclamation point (!) to the output.
+
+    if ( i % 3 === 0 && i != 0) {
+         //then remove the last word
+        let lastWord = sentArray[i-1]; //"fox"
+        console.log("lastWord is", lastWord);
+
+        let excitedWord = lastWord + "!"; //// "fox!"
+        console.log("excitedWord is", excitedWord)
+
+        let replacedPar = newPar.replace(lastWord, excitedWord);
+
+        console.log("replacedWord is \" ", replacedPar, "\""); //// "The red fox!"
+
+        //then add the last word + ! + the new word;
+        newPar = replacedPar + storedWord; //// "The red fox! likes"
+    } else {
+        newPar += storedWord;
+    };
 
     console.log(newPar);
 
@@ -40,11 +61,8 @@ for( let i = 0; i < sentArray.length; i++) {
 // 3. Adding Conditions to the Loop
 // Then add logic to addExcitement that places an exclamation point (!) after every third word. This will require you to do some basic math in JavaScript, and use an if statement.
 // Your job is to read the following English statement and write the equivalent in JavaSript code to make it work.
-// If the current value of the counter variable can be evenly divided by 3 - using the JavaScript remainder operator - then add a single exclamation point (!) to the output.
 
-if (currentValue % 3 === 0) {
-    += !
-}
+
 
 // 4. Even More Excited
 // Add logic in the addExcitement function to the increase the number of exclamation points after every third word. The number of exclamation points (!) will be determined by how many times the counter variable can be divided by 3.
