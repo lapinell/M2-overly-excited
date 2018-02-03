@@ -36,3 +36,25 @@ for( let i = 0; i < sentArray.length; i++) {
     arrayLoop.innerHTML += `<p> ${newPar} </p>`;
 }
 
+
+// 3. Adding Conditions to the Loop
+// Then add logic to addExcitement that places an exclamation point (!) after every third word. This will require you to do some basic math in JavaScript, and use an if statement.
+// Your job is to read the following English statement and write the equivalent in JavaSript code to make it work.
+// If the current value of the counter variable can be evenly divided by 3 - using the JavaScript remainder operator - then add a single exclamation point (!) to the output.
+
+if (currentValue % 3 === 0) {
+    += !
+}
+
+// 4. Even More Excited
+// Add logic in the addExcitement function to the increase the number of exclamation points after every third word. The number of exclamation points (!) will be determined by how many times the counter variable can be divided by 3.
+
+// 5. Function Arguments
+// Add a new argument to the function so that a developer can specify which character should be displayed instead of it always being an exclamation point.
+
+// 6. Another Sentence
+// Now you should define another variable that will hold an array of different words than your existing sentence. Perhaps name the variable betterSentence, or nextSentence.
+// Invoke your function for a second time, passing in the new sentence variable and a different special character.
+
+// 7. Arrow Functions
+// Watch the video about arrow functions, and see if you can rewrite addExcitement using that syntax.
